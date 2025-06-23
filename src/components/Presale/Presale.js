@@ -5,7 +5,7 @@ import Logo from '../../assets/img/presaleLogo.png'
 import Statistics from '../../assets/svg/statistics.svg'
 import Alert from '../../assets/svg/alert.svg'
 import image1 from '../../assets/img/Image1.png'
-import image2 from '../../assets/img/Image5.png'
+import image2 from '../../assets/img/image5.png'
 
 const presaleTableContent = [
 	{
