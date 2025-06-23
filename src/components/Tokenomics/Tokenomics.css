@@ -1,0 +1,322 @@
+.tokenomics {
+	background-image: url('../../assets/img/TokenomicsBg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 64px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 48px;
+}
+
+.tokenomicsTexts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.tokenomicsTextsTop {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.tokenomicsNum {
+	color: #f3ecf8;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+	display: flex;
+	width: 38px;
+	height: 24px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 32px;
+	background: var(--violet-brand, #2b133d);
+}
+
+.tokenomicsSubtitle {
+	color: var(--violet-brand, #2b133d);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+}
+
+.tokenomicsTitle {
+	color: var(--violet-brand, #2b133d);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 50px; /* 104.167% */
+}
+
+.tokenomicsCards {
+	background-image: url('../../assets/img/bgCardToc.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	align-items: center;
+	gap: 85px;
+}
+
+.tokenomicsCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 59px 24px 24px 24px;
+}
+
+.tokenomicsCardTop {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.tokenomicsCardIcon {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25px;
+	background: rgba(64, 42, 80, 0.1);
+}
+
+.tokenomicsCardSubtitle {
+	color: rgba(43, 19, 61, 0.48);
+	font-family: Manrope;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px; /* 128.571% */
+	display: flex;
+	padding: 5px 12px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	border-radius: 24px;
+	border: 1px solid rgba(43, 19, 61, 0.1);
+}
+
+.tokenomicsCardBot {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 4px;
+}
+
+.tokenomicsCardTitle {
+	color: var(--violet-brand, #2b133d);
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 18px; /* 112.5% */
+}
+
+.tokenomicsCardText {
+	color: rgba(0, 0, 0, 0.48);
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px; /* 112.5% */
+}
+
+.tokenomicsLines {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.tokenomicsLine {
+	display: inline-flex;
+	padding: 24px;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 12px;
+	background: rgba(43, 19, 61, 0.1);
+	backdrop-filter: blur(12px);
+	position: relative;
+}
+
+.tokenomicsLineLeft {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	overflow: hidden;
+}
+
+.tokenomicsLineIcon {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25px;
+	background: #f3ecf8;
+}
+
+.tokenomicsLineTitle {
+	color: #2b133d;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 137.5% */
+}
+
+.tokenomicsLineRight {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+
+.tokenomicsLineTexts {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 4px;
+}
+
+.tokenomicsLineText {
+	color: #2b133d;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 28px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 32px; /* 114.286% */
+	letter-spacing: -1.68px;
+}
+
+.tokenomicsLineSubtitle {
+	color: rgba(43, 19, 61, 0.48);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 16px; /* 114.286% */
+}
+
+.lineTokenomics {
+	width: 3px;
+	height: 24px;
+	flex-shrink: 0;
+	border-radius: 4px;
+	background: rgba(43, 19, 61, 0.24);
+}
+
+.firstTokenomicsLine {
+	background: #2b133d;
+}
+
+.firstTokenomicsLineIcon {
+	background: var(--violet, #402a50);
+	padding: 12px;
+}
+
+.firstTokenomicsLineTitle {
+	color: #fff;
+}
+
+.firstTokenomicsLineText {
+	color: #eb9aff;
+}
+
+.firstLineTokenomics {
+	background: #eb9aff;
+}
+
+.tokenomicsLine {
+	width: 60px;
+	height: 88px;
+	transform: scaleY(0.95);
+	transition: width 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+	padding: 0px;
+}
+
+.tokenomicsLine.tokenomicsLineVisible {
+	opacity: 1;
+	height: 100%;
+	padding: 24px;
+	transform: scaleY(1);
+}
+
+.tokenomicsLine:nth-child(1).tokenomicsLineVisible {
+	width: 100%;
+}
+.tokenomicsLine:nth-child(2).tokenomicsLineVisible {
+	width: 70%;
+}
+.tokenomicsLine:nth-child(3).tokenomicsLineVisible,
+.tokenomicsLine:nth-child(4).tokenomicsLineVisible {
+	width: 50%;
+}
+.tokenomicsLine:nth-child(5).tokenomicsLineVisible,
+.tokenomicsLine:nth-child(6).tokenomicsLineVisible {
+	width: 35%;
+}
+
+.tokenomicsLineTitle,
+.tokenomicsLineRight {
+	opacity: 0;
+	transform: translateX(20px);
+	transition: all 0.4s ease 0.2s;
+}
+
+.tokenomicsLineIcon {
+	position: absolute;
+	right: 50%;
+	top: 50%;
+	transform: translate(50%, -50%);
+}
+
+.tokenomicsLineVisible .tokenomicsLineIcon {
+	position: relative;
+	right: 0%;
+	top: 0%;
+	transform: translate(0%, 0%);
+}
+
+.tokenomicsLineVisible .tokenomicsLineTitle,
+.tokenomicsLineVisible .tokenomicsLineRight {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.tokenomicsLine::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: -1px;
+	width: 1px;
+	height: 100vh;
+	background-color: #dfd7e6;
+	pointer-events: none;
+	display: none;
+}
+
+.tokenomicsLine:nth-child(1).tokenomicsLineVisible::after,
+.tokenomicsLine:nth-child(2).tokenomicsLineVisible::after,
+.tokenomicsLine:nth-child(4).tokenomicsLineVisible::after {
+	display: block;
+}

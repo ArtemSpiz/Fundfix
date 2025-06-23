@@ -1,0 +1,97 @@
+.featured {
+	background-image: url('../../assets/img/featuredBg.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 64px;
+	padding: 64px 40px;
+}
+
+.featuredTexts {
+	display: flex;
+	width: 676px;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+}
+
+.featuredTitles {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.featuredNum {
+	color: #f3ecf8;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+
+	display: flex;
+	width: 38px;
+	height: 24px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 32px;
+	background: var(--violet-brand, #2b133d);
+}
+
+.featuredBefore {
+	color: var(--violet-brand, #2b133d);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+}
+
+.featuredTitle {
+	color: var(--violet-brand, #2b133d);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 50px; /* 104.167% */
+}
+
+.featuredCards {
+	display: flex;
+	gap: 8px;
+	align-items: stretch;
+}
+
+.featuredCard {
+	display: flex;
+	width: 220px;
+	padding: 32px 24px 42px 24px;
+	flex-direction: column;
+	align-items: center;
+	gap: 32px;
+	border-radius: 16px;
+	border: 1px solid rgba(43, 19, 61, 0.1);
+}
+
+.featuredCardLogo {
+	width: 156px;
+	height: 116px;
+}
+
+.featuredCardTitle {
+	color: rgba(43, 19, 61, 0.56);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px; /* 128.571% */
+}

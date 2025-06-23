@@ -1,0 +1,368 @@
+.about {
+	background-image: url('../../assets/img/aboutBg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding: 64px 40px;
+}
+
+.aboutLeft {
+	align-items: start;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.aboutTexts {
+	display: flex;
+	max-width: 676px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+}
+
+.aboutSubtitles {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.aboutNum {
+	border-radius: 32px;
+	background: var(--violet-brand, #2b133d);
+	display: flex;
+	width: 24px;
+	height: 24px;
+	justify-content: center;
+	align-items: center;
+
+	color: #f3ecf8;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+}
+
+.aboutSubtitle {
+	color: #2b133d;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+}
+
+.aboutTitle {
+	color: var(--violet-brand, #2b133d);
+	font-family: Manrope;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 50px; /* 104.167% */
+}
+
+.aboutTag {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+
+.aboutTagMobil {
+	display: none;
+}
+
+.aboutTagImages {
+	display: flex;
+	width: 40px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	border-radius: 12px;
+	border: 1px solid rgba(43, 19, 61, 0.1);
+	padding: 11px 0px;
+}
+
+.aboutTagImg {
+	width: 18px;
+	gap: 16px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.aboutTagHr {
+	background: rgba(43, 19, 61, 0.1);
+	width: 16px;
+	height: 1px;
+}
+
+.aboutTegTitles {
+	flex-direction: column;
+	display: flex;
+	align-items: start;
+	gap: 32px;
+}
+
+.aboutTagTitle {
+	color: var(--violet-brand, #2b133d);
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px; /* 112.5% */
+}
+
+.aboutCard {
+	display: flex;
+	width: 449px;
+	padding: 32px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 24px;
+	border-radius: 24px;
+	background: #fff;
+	min-width: 420px;
+}
+
+.aboutCardTexts {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 12px;
+	align-self: stretch;
+}
+
+.aboutCardTitle {
+	color: var(--violet-brand, #2b133d);
+	font-family: Manrope;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px; /* 111.111% */
+}
+
+.aboutCardText {
+	color: var(--violet-poor, #887b92);
+	align-items: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 137.5% */
+}
+
+.shield,
+.lock {
+	position: relative;
+	top: 5px;
+}
+
+.aboutCardRules {
+	width: 100%;
+	border-radius: 16px;
+	border: 1px solid rgba(43, 19, 61, 0.1);
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.aboutCardRule {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	padding: 24px;
+	border-bottom: 1px solid rgba(43, 19, 61, 0.1);
+}
+
+.ruleImage {
+	width: 32px;
+	height: 32px;
+}
+
+.ruleTitle {
+	color: var(--violet-poor, #887b92);
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 18px; /* 112.5% */
+}
+
+.aboutCardRules :nth-child(4) {
+	border-bottom: none;
+}
+
+.aboutCardBtn {
+	width: -webkit-fill-available;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 1280px) {
+	.about {
+		padding: 64px 32px 32px 32px;
+	}
+
+	.aboutTitle {
+		font-size: 45px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.about {
+		flex-direction: column;
+		padding: 64px 25px 25px 25px;
+		gap: 32px;
+		background-image: none;
+	}
+
+	.aboutCard {
+		width: 100%;
+		padding: 28px;
+	}
+
+	.aboutCardTexts {
+		align-items: center;
+	}
+
+	.aboutCardText {
+		text-align: center;
+	}
+
+	.aboutCardRule {
+		width: 100%;
+	}
+
+	.aboutTitle {
+		font-size: 40px;
+		line-height: 106.25%;
+	}
+
+	.aboutTexts {
+		width: 580px;
+	}
+}
+
+@media (max-width: 768px) {
+	.aboutCard {
+		padding: 32px 24px 24px 24px;
+		min-width: auto;
+	}
+	.aboutTitle {
+		font-size: 35px;
+		text-align: center;
+		width: 450px;
+	}
+
+	.aboutTexts {
+		align-items: center;
+		justify-content: center;
+	}
+	.about {
+		padding: 64px 20px 20px 20px;
+	}
+}
+
+@media (max-width: 640px) {
+	.ruleTitle {
+		font-size: 14px;
+		line-height: 16px; /* 114.286% */
+	}
+
+	.about {
+		padding: 64px 16px 16px 16px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.aboutTitle {
+		font-size: 32px;
+		text-align: center;
+		width: 400px;
+	}
+
+	.aboutSubtitle {
+		font-size: 14px;
+		line-height: 16px; /* 114.286% */
+	}
+
+	.aboutTexts {
+		gap: 12px;
+		width: 100%;
+	}
+
+	.aboutLeft {
+		gap: 32px;
+		width: 100%;
+	}
+
+	.aboutTag {
+		display: none;
+	}
+
+	.aboutTagMobil {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		display: flex;
+		padding: 16px 0px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+		align-self: stretch;
+		border-radius: 20px;
+		border: 1px solid var(--Lines, rgba(43, 19, 61, 0.1));
+	}
+
+	.aboutTagMobilCont {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		border-bottom: 1px solid var(--Lines, rgba(43, 19, 61, 0.1));
+		padding-bottom: 16px;
+	}
+
+	.aboutTagMobil :nth-child(5) {
+		border-bottom: none;
+		padding-bottom: 0px;
+	}
+
+	.aboutTagTitle {
+		text-align: center;
+		padding: 0px 24px;
+	}
+
+	.aboutTagMobilImg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.aboutCardRules {
+		padding: 24px 0px;
+		gap: 16px;
+	}
+
+	.aboutCardRule {
+		padding: 0px;
+		padding-bottom: 16px;
+		padding-left: 24px;
+	}
+
+	.aboutCardRules :nth-child(4) {
+		border-bottom: none;
+		padding-bottom: 0px;
+	}
+}

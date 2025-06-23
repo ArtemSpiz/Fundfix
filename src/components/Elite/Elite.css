@@ -1,0 +1,171 @@
+.elite {
+	background-image: url('../../assets/img/eliteBg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+	padding: 64px 48px;
+}
+
+.eliteTexts {
+	display: flex;
+	width: 676px;
+	flex-direction: column;
+	align-items: center;
+	gap: 32px;
+}
+
+.eliteTextsTop {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+	align-self: stretch;
+}
+
+.eliteTitles {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.eliteNum {
+	color: #f3ecf8;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+	display: flex;
+	width: 24px;
+	height: 24px;
+	padding: 1px 0px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 32px;
+	background: var(--violet-brand, #2b133d);
+}
+
+.eliteBefore {
+	color: var(--violet-brand, #2b133d);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+}
+
+.eliteTitle {
+	display: flex;
+	color: var(--violet-brand, #2b133d);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 50px; /* 104.167% */
+	display: flex;
+	flex-direction: column;
+}
+
+.eliteTitleBottom {
+	display: flex;
+	gap: 10px;
+}
+
+.eliteTitle2 {
+	color: rgba(43, 19, 61, 0.32);
+}
+
+.eliteSubtitle {
+	color: var(--violet-brand, #2b133d);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 137.5% */
+	width: 448px;
+}
+
+.eliteCards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 8px;
+	align-items: stretch;
+}
+
+.eliteCard {
+	display: flex;
+	width: 100%;
+	padding: 8px 8px 32px 8px;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	border-radius: 24px;
+	background: #fff;
+}
+
+.eliteCardImage {
+	width: 374px;
+	height: 260px;
+	flex-shrink: 0;
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.eliteCardInf {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 8px;
+	align-items: center;
+	text-align: center;
+}
+
+.eliteCardName {
+	color: #2b133d;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px; /* 111.111% */
+}
+
+.eliteCardSubtitle {
+	width: 200px;
+	color: rgba(43, 19, 61, 0.56);
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 137.5% */
+}
+
+.eliteCardBtn {
+	padding: 18px 0px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	background: #2b133d;
+	width: 326px;
+
+	color: #eb9aff;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 22px; /* 110% */
+	letter-spacing: -1.2px;
+	cursor: pointer;
+}

@@ -1,0 +1,164 @@
+.faq {
+	background-image: url('../../assets/img/FAQBg.png');
+	background-color: var(--violet-brand, #2b133d);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+	padding: 64px 40px;
+	justify-content: center;
+	align-items: center;
+
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faqTexts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+	align-self: stretch;
+}
+
+.faqSubtitles {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.faqNum {
+	color: #2b133d;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+
+	display: flex;
+	width: 38px;
+	height: 24px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 32px;
+	background: #eb9aff;
+}
+
+.faqSubtitle {
+	color: #eb9aff;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 137.5% */
+	text-transform: uppercase;
+}
+
+.faqTitle {
+	color: #fff;
+	text-align: center;
+	font-family: Manrope;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 50px; /* 104.167% */
+}
+
+.faqCards {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.faqCard {
+	display: inline-flex;
+	padding: 24px 28px 24px 24px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	height: 88px;
+	width: 800px;
+
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.05);
+	transition: all 0.4s ease-in-out;
+}
+
+.faqCardOpen {
+	height: 134px;
+	background: #fff;
+}
+
+.faqCardTop {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.faqCardTitles {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.faqCardNum {
+	color: var(--white-primary, #f5f3f8);
+	font-family: Oswald;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px; /* 125% */
+	display: flex;
+	width: 40px;
+	height: 40px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25px;
+	background: #2b133d;
+}
+
+.faqCardTitle {
+	color: #fff;
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 137.5% */
+}
+
+.faqCardTitleOpen {
+	color: var(--violet-brand, #2b133d);
+}
+
+.faqCardTriangle {
+	transition: all ease-in-out 0.5s;
+	cursor: pointer;
+}
+
+.rotated {
+	transform: rotate(180deg);
+}
+
+.faqCardTriangle path {
+	transition: fill ease-in-out 0.3s;
+}
+
+.rotated path {
+	fill: #2b133d;
+}
+
+.faqCardText {
+	color: rgba(43, 19, 61, 0.56);
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 22px; /* 137.5% */
+}

@@ -1,0 +1,31 @@
+.ButtonPink {
+	display: flex;
+	padding: 15px 20px;
+	gap: 10px;
+	align-items: center;
+	gap: 8px;
+	border: none;
+
+	border-radius: 16px;
+	border: 1px solid var(--violet-brand, #2b133d);
+	background: var(--pink, #eb9aff);
+
+	color: var(--violet-brand, #2b133d);
+	font-family: Manrope;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 18px; /* 112.5% */
+	cursor: pointer;
+
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	transition: all ease-in-out 0.5s;
+}
+
+.ButtonPink:hover {
+	background: #f0b5ff;
+}
