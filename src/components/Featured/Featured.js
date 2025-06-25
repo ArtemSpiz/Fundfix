@@ -1,4 +1,7 @@
+'use client'
+
 import './Featured.css'
+import { useRef, useEffect, useState } from 'react'
 
 import Logo1 from '../../assets/img/featuredLogo1.png'
 import Logo2 from '../../assets/img/featuredLogo2.png'
@@ -36,6 +39,60 @@ const featuredCards = [
 ]
 
 export default function Featured() {
+	const cardsRef = useRef(null)
+	const [activeIndex, setActiveIndex] = useState(0)
+	const scrollTimeout = useRef(null)
+
+	const scrollToActiveCard = index => {
+		const container = cardsRef.current
+		const card = container?.children[index]
+		if (container && card) {
+			const containerWidth = container.offsetWidth
+			const cardOffsetLeft = card.offsetLeft
+			const cardWidth = card.offsetWidth
+			const scrollLeft = cardOffsetLeft - (containerWidth / 2 - cardWidth / 2)
+			container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+		}
+	}
+
+	useEffect(() => {
+		const container = cardsRef.current
+		if (!container) return
+
+		const onScroll = () => {
+			if (scrollTimeout.current) clearTimeout(scrollTimeout.current)
+
+			scrollTimeout.current = setTimeout(() => {
+				const containerCenter = container.scrollLeft + container.offsetWidth / 2
+
+				let closestIndex = 0
+				let closestDistance = Infinity
+
+				Array.from(container.children).forEach((card, index) => {
+					const cardCenter = card.offsetLeft + card.offsetWidth / 2
+					const distance = Math.abs(containerCenter - cardCenter)
+
+					if (distance < closestDistance) {
+						closestDistance = distance
+						closestIndex = index
+					}
+				})
+
+				setActiveIndex(closestIndex)
+				scrollToActiveCard(closestIndex)
+			}, 150)
+		}
+
+		container.addEventListener('scroll', onScroll)
+
+		scrollToActiveCard(activeIndex)
+
+		return () => {
+			container.removeEventListener('scroll', onScroll)
+			if (scrollTimeout.current) clearTimeout(scrollTimeout.current)
+		}
+	}, [])
+
 	return (
 		<div className='featured'>
 			<div className='featuredTexts'>
@@ -48,15 +105,17 @@ export default function Featured() {
 				</div>
 			</div>
 
-			<div className='featuredCards'>
-				{featuredCards.map((card, index) => (
-					<div className='featuredCard' key={index}>
-						<div className='featuredCardLogo'>
-							<Image src={card.logo} alt='logo' />
+			<div className='featuredCardsWrapper'>
+				<div className='featuredCards' ref={cardsRef}>
+					{featuredCards.map((card, index) => (
+						<div className='featuredCard' key={index}>
+							<div className='featuredCardLogo'>
+								<Image src={card.logo} alt='logo' />
+							</div>
+							<div className='featuredCardTitle'>{card.title}</div>
 						</div>
-						<div className='featuredCardTitle'>{card.title}</div>
-					</div>
-				))}
+					))}
+				</div>
 			</div>
 		</div>
 	)

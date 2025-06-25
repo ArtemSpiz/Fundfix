@@ -75,6 +75,10 @@
 	flex-direction: column;
 }
 
+.Mobil {
+	display: none;
+}
+
 .eliteTitleBottom {
 	display: flex;
 	gap: 10px;
@@ -168,4 +172,129 @@
 	line-height: 22px; /* 110% */
 	letter-spacing: -1.2px;
 	cursor: pointer;
+	border: none;
+}
+
+@media (max-width: 1280px) {
+	.elite {
+		padding: 64px 32px 32px 32px;
+		gap: 32px;
+	}
+	.eliteTitle {
+		font-size: 45px;
+	}
+
+	.eliteCards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.thirdCardCentered {
+		position: relative;
+		left: 50%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.elite {
+		padding: 64px 25px 32px 25px;
+	}
+	.eliteTitle {
+		font-size: 40px;
+		line-height: 106.25%;
+	}
+
+	.eliteCard {
+		padding: 8px 8px 24px 8px;
+	}
+
+	.eliteCardImage {
+		width: 327px;
+		height: 260px;
+	}
+
+	.eliteCardBtn {
+		padding: 13px 94px 13px 95px;
+		width: auto;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 768px) {
+	.elite {
+		background-image: none;
+		padding: 64px 20px 32px 20px;
+	}
+	.eliteTitle {
+		font-size: 35px;
+		line-height: 106.25%;
+	}
+
+	.eliteCards {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.thirdCardCentered {
+		position: static;
+	}
+
+	.eliteCardImage {
+		width: 374px;
+	}
+}
+
+@media (max-width: 640px) {
+	.elite {
+		padding: 64px 16px 32px 16px;
+		gap: 24px;
+	}
+
+	.eliteTexts {
+		gap: 24px;
+	}
+
+	.eliteBefore {
+		font-size: 14px;
+	}
+
+	.eliteTextsTop {
+		gap: 12px;
+	}
+
+	.eliteTitle {
+		font-size: 32px;
+		line-height: 106.25%;
+		width: 100%;
+	}
+
+	.Mobil {
+		display: flex;
+	}
+
+	.Comp {
+		display: none;
+	}
+
+	.eliteTitleBottom {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.eliteCardImage {
+		width: 327px;
+	}
+
+	.eliteCardName {
+		font-size: 16px;
+	}
+
+	.eliteTexts {
+		width: auto;
+	}
+
+	.eliteSubtitle {
+		width: 100%;
+		max-width: 450px;
+	}
 }

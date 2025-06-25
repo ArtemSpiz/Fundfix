@@ -63,9 +63,9 @@ export default function Presale() {
 				</div>
 
 				<div className='presaleSubtitle'>
-					Our team has operated inside the companies that defined modern
-					tech—scaling platforms, building infrastructure, and investing
-					alongside the world’s top VCs
+					Phase 2 is live now with a 25% bonus. Audited, verified, and securely
+					managed. Act now to join a growing network of accredited investors
+					before the next price tier.
 				</div>
 
 				<ButtonPink
@@ -103,9 +103,12 @@ export default function Presale() {
 					</div>
 				</div>
 
-				<div className='presaleCards'>
+				<div className='presaleCardsPurple'>
 					{presaleCard.map((card, index) => (
-						<div className='presaleCard' key={index}>
+						<div
+							key={index}
+							className={`presaleCard ${index === 2 ? 'thirdPresaleCard' : ''}`}
+						>
 							<div className='presaleCardTop'>
 								<div className='presaleCardTitle'>
 									Phase <div className='presaleCardNum'>{card.num}</div>

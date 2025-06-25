@@ -5,20 +5,28 @@
 	flex-direction: column;
 }
 
-.heroCanvas {
+.heroCanvasWrapper {
 	position: absolute;
 	top: 50%;
 	right: 50%;
 	transform: translate(50%, -35%);
 	z-index: 0;
 	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	pointer-events: none;
 }
 
+.heroCanvas {
+	width: 100%;
+	height: 100%;
+	transform: scale(1.1);
+	transform-origin: center;
+	transition: transform 0.3s ease;
+}
 .heroInf {
 	z-index: 2;
 	position: relative;
-	/* background-image: url('../../assets/img/heroBg.png'); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -142,7 +150,7 @@
 		padding: 32px 25px 25px 25px;
 	}
 
-	.heroCanvas {
+	.heroCanvasWrapper {
 		position: absolute;
 		top: 50%;
 		right: 50%;
@@ -150,6 +158,10 @@
 		z-index: 0;
 		width: 100%;
 		pointer-events: none;
+	}
+
+	.heroCanvas {
+		transform: scale(0.9);
 	}
 }
 
@@ -166,15 +178,20 @@
 }
 
 @media (max-width: 640px) {
-	.heroCanvas {
+	.heroCanvasWrapper {
 		position: absolute;
 		top: 50%;
 		right: 50%;
-		transform: translate(50%, -55%);
+		transform: translate(50%, -52%);
 		z-index: 0;
 		width: 100%;
 		pointer-events: none;
 	}
+
+	.heroCanvas {
+		transform: scale(0.8);
+	}
+
 	.heroTitle {
 		letter-spacing: -0.64px;
 		font-size: 40px;

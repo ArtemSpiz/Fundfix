@@ -174,3 +174,63 @@
 .dealTableBtn {
 	width: -webkit-fill-available;
 }
+@media (max-width: 1280px) {
+	.deal {
+		padding: 48px 16px;
+	}
+
+	.dealTitle {
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.dealTitle {
+		font-size: 26px;
+		line-height: 34px; /* 141.667% */
+	}
+
+	.dealTexts {
+		gap: 12px;
+	}
+	.deal {
+		background-image: none;
+	}
+
+	.dealCard {
+		width: 100%;
+		max-width: 450px;
+		padding: 32px 24px 24px 24px;
+		gap: 24px;
+	}
+}
+
+@media (max-width: 640px) {
+	.dealBefore {
+		font-size: 14px;
+	}
+	.dealTitle {
+		font-size: 24px;
+	}
+
+	.dealTableTitle {
+		font-size: 14px;
+	}
+
+	.dealTableSubtitle {
+		font-size: 24px;
+	}
+
+	.dealCardTesla {
+		display: none;
+	}
+
+	.dealCardSubtitles {
+		gap: 4px;
+	}
+
+	.dealCardImg {
+		width: 28px;
+		height: 28px;
+	}
+}

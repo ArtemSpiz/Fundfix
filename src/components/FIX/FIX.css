@@ -18,7 +18,6 @@
 
 .fixTextsTop {
 	display: flex;
-	width: 676px;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 16px;
@@ -69,6 +68,10 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: 50px; /* 104.167% */
+}
+
+.fixTitleMobil {
+	display: none;
 }
 
 .fixTitleTop {
@@ -195,4 +198,97 @@
 .fixCardImg {
 	width: 294px;
 	height: 6px;
+}
+
+@media (max-width: 1280px) {
+	.fix {
+		padding: 64px 32px;
+	}
+
+	.fixTitle {
+		font-size: 45px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.fix {
+		padding: 64px 25px;
+		background-image: url('../../assets/img/MobilBg.png');
+		flex-direction: column;
+		gap: 48px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.fixTextsTop,
+	.fixTexts {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.fixTitle {
+		text-align: center;
+	}
+
+	.fixTitle {
+		font-size: 40px;
+	}
+
+	.fixSubtitles {
+		display: grid;
+		grid-template-columns: repeat(2, 156px);
+		gap: 16px;
+	}
+
+	.thirdFixSubtitle {
+		width: max-content;
+	}
+
+	.fixSubtitles :nth-child(3) {
+		position: relative;
+		left: 50%;
+	}
+
+	.line {
+		height: 48px;
+	}
+}
+
+@media (max-width: 768px) {
+	.fix {
+		padding: 64px 20px;
+	}
+
+	.fixTitle {
+		font-size: 35px;
+		line-height: 106.25%; /* 106.25% */
+		letter-spacing: -0.64px;
+	}
+
+	.fixTextsTop {
+		gap: 14px;
+	}
+}
+
+@media (max-width: 640px) {
+	.fix {
+		padding: 64px 16px;
+	}
+
+	.fixTitle {
+		font-size: 32px;
+	}
+
+	.fixBefore {
+		font-size: 14px;
+	}
+
+	.fixTitleMobil {
+		display: flex;
+		align-items: center;
+	}
+
+	.fixTitleComp {
+		display: none;
+	}
 }

@@ -365,4 +365,8 @@
 		border-bottom: none;
 		padding-bottom: 0px;
 	}
+
+	.aboutTexts {
+		gap: 12px;
+	}
 }

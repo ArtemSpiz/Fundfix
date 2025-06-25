@@ -2,7 +2,7 @@ import './Elite.css'
 import eliteImage from '../../assets/img/eliteImage.png'
 import Image from 'next/image'
 
-const eliteCards = [
+const eliteCardsCont = [
 	{
 		image: eliteImage,
 		name: 'Sarah Chen',
@@ -32,10 +32,18 @@ export default function Elite() {
 						<div className='eliteNum'>VI</div>
 						<div className='eliteBefore'>WHY</div>
 					</div>
-					<div className='eliteTitle'>
+					<div className='eliteTitle Comp'>
 						Founded in the Heart of
 						<div className='eliteTitleBottom'>
 							Silicon Valley’s
+							<span className='eliteTitle2'>Elite Network</span>
+						</div>
+					</div>
+
+					<div className='eliteTitle Mobil'>
+						Founded in the Heart
+						<div className='eliteTitleBottom'>
+							of Silicon Valley’s
 							<span className='eliteTitle2'>Elite Network</span>
 						</div>
 					</div>
@@ -49,8 +57,11 @@ export default function Elite() {
 			</div>
 
 			<div className='eliteCards'>
-				{eliteCards.map((card, index) => (
-					<div className='eliteCard' key={index}>
+				{eliteCardsCont.map((card, index) => (
+					<div
+						className={`eliteCard ${index === 2 ? 'thirdCardCentered' : ''}`}
+						key={index}
+					>
 						<div className='eliteCardImage'>
 							<Image src={card.image} alt='cardImage' />
 						</div>

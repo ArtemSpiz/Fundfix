@@ -68,6 +68,10 @@
 	line-height: 50px; /* 104.167% */
 }
 
+.howCardsLine {
+	display: none;
+}
+
 .howItWorkTitleTop {
 	display: flex;
 	gap: 8px;
@@ -230,4 +234,94 @@
 
 .howCardText.hovered {
 	color: rgba(43, 19, 61, 0.56);
+}
+
+@media (max-width: 1450px) {
+	.howCardsCanvas {
+		display: none;
+	}
+
+	.howCards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.howItWorkBottom {
+		gap: 0px;
+	}
+
+	.howCardsTitle {
+		padding-bottom: 10px;
+	}
+
+	.howCardsLine {
+		display: flex;
+		width: 1px;
+		height: 38px;
+		background: rgba(255, 255, 255, 0.1);
+	}
+}
+
+@media (max-width: 1280px) {
+	.howItWork {
+		padding: 64px 32px 32px 32px;
+		gap: 60px;
+	}
+
+	.howItWorkTitle {
+		font-size: 45px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.howItWork {
+		padding: 64px 25px 25px 25px;
+	}
+
+	.howItWorkTitle {
+		font-size: 40px;
+		line-height: 106.25%;
+	}
+}
+
+@media (max-width: 768px) {
+	.howItWork {
+		padding: 64px 20px 20px 20px;
+		background-image: url('../../assets/img/MobilBg.png');
+		gap: 48px;
+	}
+
+	.howItWorkTitle {
+		font-size: 35px;
+		line-height: 106.25%;
+	}
+
+	.howCards {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.howCard {
+		height: 100%;
+		gap: 48px;
+		padding: 24px;
+	}
+
+	.howCardTitle {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 640px) {
+	.howItWork {
+		padding: 64px 16px 16px 16px;
+	}
+
+	.howItWorkTitle {
+		font-size: 32px;
+	}
+
+	.howItWorkSubtitle {
+		font-size: 14px;
+	}
 }

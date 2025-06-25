@@ -1,5 +1,6 @@
 .headerWrapper {
 	padding: 8px 8px 0px 8px;
+	z-index: 4;
 }
 
 .header {

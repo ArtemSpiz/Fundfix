@@ -133,3 +133,89 @@
 	font-weight: 500;
 	line-height: 22px; /* 137.5% */
 }
+
+@media (max-width: 1280px) {
+	.chang {
+		padding: 64px 32px 32px 32px;
+	}
+	.changTitle {
+		font-size: 45px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.chang {
+		padding: 64px 25px 25px 25px;
+		background-image: url('../../assets/img/MobilBg.png');
+	}
+
+	.changCard {
+		padding: 24px;
+		width: 348px;
+	}
+
+	.changTitle {
+		font-size: 40px;
+		line-height: 106.25%;
+	}
+	.changTexts {
+		width: 600px;
+	}
+}
+
+@media (max-width: 768px) {
+	.chang {
+		padding: 64px 20px 20px 20px;
+		justify-content: center;
+		align-items: center;
+		gap: 70px;
+	}
+	.changTitle {
+		font-size: 35px;
+		text-align: center;
+		width: 450px;
+	}
+
+	.changTexts {
+		justify-content: center;
+		width: 100%;
+		align-items: center;
+	}
+
+	.changCards {
+		flex-direction: column;
+	}
+
+	.changCard {
+		width: 100%;
+		max-width: 450px;
+	}
+}
+
+@media (max-width: 640px) {
+	.changTexts {
+		gap: 12px;
+	}
+	.chang {
+		padding: 64px 16px 16px 16px;
+		gap: 48px;
+	}
+
+	.changTitle {
+		font-size: 32px;
+		text-align: center;
+		max-width: 400px;
+		width: 341px;
+		line-height: 34px; /* 106.25% */
+		letter-spacing: -0.64px;
+	}
+
+	.changSubtitle {
+		font-size: 14px;
+		line-height: 16px; /* 114.286% */
+	}
+
+	.changTexts {
+		overflow: hidden;
+	}
+}

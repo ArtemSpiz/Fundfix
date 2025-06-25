@@ -42,24 +42,28 @@ export default function Footer() {
 				</div>
 
 				<div className='footerNav'>
-					<div className='footerLinks'>
+					<div className='footerLinks footerLinksAbout'>
 						<div className='footerLinksTitle'>About</div>
 
-						{footerAboutSubtitles.map((about, index) => (
-							<div key={index} className='footerLinksSubtitle'>
-								{about.subtitle}
-							</div>
-						))}
+						<div className='footerAboutSubtitles'>
+							{footerAboutSubtitles.map((about, index) => (
+								<div key={index} className='footerLinksSubtitle'>
+									{about.subtitle}
+								</div>
+							))}
+						</div>
 					</div>
 
-					<div className='footerLinks'>
+					<div className='footerLinks footerLinksSocials'>
 						<div className='footerLinksTitle'>Socials</div>
 
-						{footerSocialsSubtitles.map((social, index) => (
-							<div key={index} className='footerLinksSubtitle'>
-								{social.subtitle}
-							</div>
-						))}
+						<div className='footerSocialsSubtitles'>
+							{footerSocialsSubtitles.map((social, index) => (
+								<div key={index} className='footerLinksSubtitle'>
+									{social.subtitle}
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>

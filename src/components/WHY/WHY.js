@@ -13,7 +13,7 @@ import People from '../../assets/svg/whitePeople.svg'
 import Rocket from '../../assets/svg/whiteRocket.svg'
 import Statistics from '../../assets/svg/whiteStatistics.svg'
 import Image from 'next/image'
-import { useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
 const cardsAccess = [
 	{
@@ -63,6 +63,76 @@ const cardsRecord = [
 ]
 
 export default function WHY() {
+	const scrollRef = useRef(null)
+	const [activeIndex, setActiveIndex] = useState(0)
+	const isMobile = typeof window !== 'undefined' && window.innerWidth < 640
+	const scrollTimeout = useRef(null)
+
+	useEffect(() => {
+		if (!isMobile) return
+		const container = scrollRef.current
+		if (!container) return
+
+		const cards = container.querySelectorAll('.whyRecordCard')
+		const activeCard = cards[activeIndex]
+		if (!activeCard) return
+
+		const scrollTo =
+			activeCard.offsetLeft +
+			activeCard.offsetWidth / 2 -
+			container.offsetWidth / 2
+
+		container.scrollTo({
+			left: scrollTo,
+			behavior: 'smooth',
+		})
+	}, [activeIndex, isMobile])
+
+	useEffect(() => {
+		if (!isMobile) return
+		const container = scrollRef.current
+		if (!container) return
+
+		const handleScroll = () => {
+			if (scrollTimeout.current) clearTimeout(scrollTimeout.current)
+
+			scrollTimeout.current = setTimeout(() => {
+				const cards = Array.from(container.querySelectorAll('.whyRecordCard'))
+				const center = container.scrollLeft + container.offsetWidth / 2
+
+				let closest = 0
+				let minDist = Infinity
+
+				cards.forEach((card, i) => {
+					const cardCenter = card.offsetLeft + card.offsetWidth / 2
+					const dist = Math.abs(cardCenter - center)
+					if (dist < minDist) {
+						minDist = dist
+						closest = i
+					}
+				})
+
+				setActiveIndex(closest)
+			}, 300)
+		}
+
+		container.addEventListener('scroll', handleScroll, { passive: true })
+		return () => {
+			container.removeEventListener('scroll', handleScroll)
+			clearTimeout(scrollTimeout.current)
+		}
+	}, [isMobile])
+
+	useEffect(() => {
+		if (!isMobile) return
+
+		const interval = setInterval(() => {
+			setActiveIndex(prev => (prev + 1) % cardsRecord.length)
+		}, 10000)
+
+		return () => clearInterval(interval)
+	}, [isMobile])
+
 	useEffect(() => {
 		const squares = document.querySelectorAll('.bgSquare')
 
@@ -151,30 +221,40 @@ export default function WHY() {
 			<div className='whyRecord'>
 				<div className='whyRecordTitle'>Our Track Record Speaks for Itself</div>
 
-				<div className='whyRecordCardsWrapper'>
-					<div className='whyRecordCards'>
-						{cardsRecord.map((card, index) => (
-							<div key={index} className='whyRecordCard'>
-								<div className='whyRecordCardTop'>
-									<div className='whyRecordCardImg'>
-										<card.image />
-									</div>
-									<div className='whyRecordCardTitles'>
-										<div className='whyRecordCardTitle'>{card.title}</div>
+				<div className='whyRecordCardsMob'>
+					<div className='whyRecordCardsWrapper' ref={scrollRef}>
+						<div className='whyRecordCards'>
+							{cardsRecord.map((card, index) => (
+								<div key={index} className='whyRecordCard'>
+									<div className='whyRecordCardTop'>
+										<div className='whyRecordCardImg'>
+											<card.image />
+										</div>
+										<div className='whyRecordCardTitles'>
+											<div className='whyRecordCardTitle'>{card.title}</div>
 
-										{card.subtitle && (
-											<div className='whyRecordCardSubtitle'>
-												{card.subtitle}
-											</div>
-										)}
+											{card.subtitle && (
+												<div className='whyRecordCardSubtitle'>
+													{card.subtitle}
+												</div>
+											)}
+										</div>
+									</div>
+
+									<div className='whyRecordCardText'>
+										<span className='blur-bg' />
+										{card.text}
 									</div>
 								</div>
-
-								<div className='whyRecordCardText'>
-									<span className='blur-bg' />
-									{card.text}
-								</div>
-							</div>
+							))}
+						</div>
+					</div>
+					<div className='whyIndicators'>
+						{cardsRecord.map((_, i) => (
+							<div
+								key={i}
+								className={`whyIndicator ${i === activeIndex ? 'active' : ''}`}
+							/>
 						))}
 					</div>
 				</div>

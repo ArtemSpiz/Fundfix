@@ -67,18 +67,33 @@ export default function FIX() {
 						<div className='fixNum'>VII</div>
 						<div className='fixBefore'>$FIX Token Utility</div>
 					</div>
-					<div className='fixTitle'>
+					<div className='fixTitle fixTitleComp'>
 						<div className='fixTitleTop'>
-							<span className='fixTitle'>$FIX:</span>{' '}
+							<span className='fixTitle'>$FIX:</span>
 							<span className='fixTitle2'>More Than a Token.</span>
 						</div>
 						It’s a Pass Into the Future
+					</div>
+
+					<div className='fixTitle fixTitleMobil'>
+						<div className='fixTitleTop'>
+							<span className='fixTitle'>$FIX:</span>
+							<span className='fixTitle2'>More Than a</span>
+						</div>
+						<div className='fixTitleTop'>
+							<span className='fixTitle2'>Token.</span>
+							<span className='fixTitle'>It’s a Pass Into</span>
+						</div>
+						the Future
 					</div>
 				</div>
 
 				<div className='fixSubtitles'>
 					{fixSubtitles.map((fix, index) => (
-						<div className='fixSubtitle' key={index}>
+						<div
+							key={index}
+							className={`fixSubtitle ${index === 2 ? 'thirdFixSubtitle' : ''}`}
+						>
 							<fix.icon className='fixSubtitleIcon' />
 							<div>{fix.title}</div>
 						</div>

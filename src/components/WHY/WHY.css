@@ -15,94 +15,14 @@
 	position: relative;
 }
 
-.whyAccessBackground {
-	position: absolute;
-	bottom: 5%;
-	right: 50%;
-	transform: translate(50%, 0%);
-	width: 70%;
-	height: 70%;
-	z-index: 1;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-gap: 32px;
-	gap: 2px;
-	padding: 40px;
-	pointer-events: none;
-}
-
-.bgSquare {
-	width: 100%;
-	height: 100%;
-	border-radius: 24px;
-	background: linear-gradient(
-		225deg,
-		rgba(255, 255, 255, 0) 0%,
-		rgba(243, 236, 248, 0.32) 100%
-	);
-	box-shadow: 0px 4px 12px 0px rgba(255, 255, 255, 0.24) inset;
-	backdrop-filter: blur(64px);
-	position: relative;
-	overflow: hidden;
-	pointer-events: auto;
-}
-
-/* псевдоелемент для glowing effect */
-.bgSquare::after {
-	content: '';
-	position: absolute;
-	width: 150px;
-	height: 150px;
-	pointer-events: none;
-	opacity: 0;
-	z-index: 1;
-	transition: opacity 0.3s ease;
-	left: var(--mouse-x, 0px);
-	top: var(--mouse-y, 0px);
-	transform: translate(-50%, -50%);
-	background: radial-gradient(
-		circle,
-		var(--pink, #eb9aff) 0%,
-		rgba(235, 154, 255, 0.8) 20%,
-		rgba(235, 154, 255, 0.4) 50%,
-		rgba(235, 154, 255, 0.1) 80%,
-		rgba(235, 154, 255, 0) 100%
-	);
-	filter: blur(48px);
-	border-radius: 100%;
-}
-
-.bgSquare.hovered::after {
-	opacity: 0.7;
-	transform: translate(var(--mouse-x), var(--mouse-y));
-	transform: translate(
-		calc(var(--mouse-x) - 80px),
-		calc(var(--mouse-y) - 80px)
-	); /* Центруємо ефект */
-}
-
-.bgSquare:hover::after {
-	content: '';
-	position: absolute;
-	top: -8px;
-	left: -8px;
-	right: -8px;
-	bottom: -8px;
-	border-radius: 16px;
-	background: var(--pink, #eb9aff);
-	filter: blur(20px);
-	opacity: 0.7;
-	z-index: -1;
-	transition: opacity 0.3s ease;
-}
-
 .whyAccessTexts {
+	z-index: 4;
 	display: flex;
 	width: 676px;
 	flex-direction: column;
 	align-items: center;
 	gap: 32px;
+	pointer-events: none;
 }
 
 .whyAccessTextsTop {
@@ -169,6 +89,7 @@
 	font-weight: 500;
 	line-height: 22px; /* 137.5% */
 	width: 448px;
+	pointer-events: none;
 }
 
 .whyAccessCards {
@@ -178,6 +99,7 @@
 	gap: 8px;
 	justify-content: center;
 	align-items: center;
+	pointer-events: none;
 }
 
 .whyAccessCard:nth-child(3) {
@@ -265,6 +187,87 @@
 	width: 280px;
 }
 
+.whyAccessBackground {
+	position: absolute;
+	bottom: 5%;
+	right: 50%;
+	transform: translate(50%, 0%);
+	width: 70%;
+	height: 70%;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 32px;
+	gap: 2px;
+	padding: 40px;
+	pointer-events: none;
+}
+
+.bgSquare {
+	width: 100%;
+	height: 100%;
+	border-radius: 24px;
+	background: linear-gradient(
+		225deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(243, 236, 248, 0.32) 100%
+	);
+	box-shadow: 0px 4px 12px 0px rgba(255, 255, 255, 0.24) inset;
+	backdrop-filter: blur(64px);
+	position: relative;
+	overflow: hidden;
+	pointer-events: auto;
+}
+
+.bgSquare::after {
+	content: '';
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	pointer-events: none;
+	opacity: 0;
+	z-index: 1;
+	transition: opacity 0.3s ease;
+	left: var(--mouse-x, 0px);
+	top: var(--mouse-y, 0px);
+	transform: translate(-50%, -50%);
+	background: radial-gradient(
+		circle,
+		var(--pink, #eb9aff) 0%,
+		rgba(235, 154, 255, 0.8) 20%,
+		rgba(235, 154, 255, 0.4) 50%,
+		rgba(235, 154, 255, 0.1) 80%,
+		rgba(235, 154, 255, 0) 100%
+	);
+	filter: blur(48px);
+	border-radius: 100%;
+}
+
+.bgSquare.hovered::after {
+	opacity: 0.7;
+	transform: translate(var(--mouse-x), var(--mouse-y));
+	transform: translate(
+		calc(var(--mouse-x) - 80px),
+		calc(var(--mouse-y) - 80px)
+	);
+}
+
+.bgSquare:hover::after {
+	content: '';
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	right: -8px;
+	bottom: -8px;
+	border-radius: 16px;
+	background: var(--pink, #eb9aff);
+	filter: blur(20px);
+	opacity: 0.7;
+	z-index: -1;
+	transition: opacity 0.3s ease;
+}
+
 .whyRecord {
 	display: flex;
 	flex-direction: column;
@@ -290,6 +293,18 @@
 	display: flex;
 	scrollbar-width: none;
 	justify-content: center;
+}
+
+.whyRecordCardsMob {
+	display: flex;
+	flex-direction: column;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 100%;
+	display: flex;
+	scrollbar-width: none;
+	justify-content: center;
+	gap: 32px;
 }
 
 .whyRecordCards {
@@ -385,4 +400,242 @@
 	height: 98px;
 	flex-shrink: 0;
 	background: rgba(255, 255, 255, 0.4);
+}
+
+.whyIndicators {
+	display: none;
+}
+
+@media (max-width: 1350px) {
+	.whyRecordCardsWrapper {
+		justify-content: start;
+	}
+	.why {
+		padding: 0;
+	}
+
+	.whyRecordCardsWrapper {
+		padding: 0px 40px;
+	}
+
+	.whyRecordCardsMob {
+		padding-bottom: 48px;
+	}
+
+	.whyAccess {
+		padding: 64px 40px 40px 40px;
+	}
+}
+
+@media (max-width: 1280px) {
+	.whyAccessBackground {
+		bottom: 0;
+		width: 80%;
+	}
+	.whyRecordCardsWrapper {
+		padding: 0px 32px 0px 32px;
+	}
+
+	.whyAccess {
+		padding: 64px 32px 32px 32px;
+		gap: 60px;
+	}
+
+	.whyRecordTitle {
+		padding-top: 64px;
+	}
+
+	.whyRecord {
+		gap: 60px;
+	}
+
+	.whyRecordTitle,
+	.whyAccessTitle {
+		font-size: 45px;
+	}
+
+	.whyAccessTexts {
+		width: 600px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.whyAccess {
+		padding: 64px 25px 25px 25px;
+	}
+	.whyRecordCardsWrapper {
+		padding: 0px 25px 0px 25px;
+	}
+
+	.whyRecordTitle,
+	.whyAccessTitle {
+		font-size: 40px;
+		line-height: 106.25%;
+	}
+
+	.whyAccessTexts {
+		width: 550px;
+	}
+
+	.whyAccessBackground {
+		display: none;
+	}
+
+	.whyAccessCard {
+		padding: 24px;
+	}
+}
+
+@media (max-width: 768px) {
+	.whyAccess {
+		padding: 64px 20px 20px 20px;
+		min-width: auto;
+		gap: 48px;
+	}
+	.whyRecordCardsWrapper {
+		padding: 0px 20px 0px 20px;
+	}
+
+	.whyRecord {
+		gap: 48px;
+	}
+	.whyRecordTitle,
+	.whyAccessTitle {
+		font-size: 35px;
+		text-align: center;
+	}
+
+	.whyAccessTexts {
+		width: 450px;
+		gap: 24px;
+	}
+
+	.whyRecordTitle {
+		width: 350px;
+	}
+
+	.whyRecordCard {
+		height: 310px;
+	}
+
+	.whyAccessCards {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.whyAccessCard {
+		width: 100%;
+		max-width: 500px;
+	}
+
+	.whyAccessCard:nth-child(1) {
+		position: static;
+		top: 50%;
+	}
+
+	.whyCardText {
+		width: 290px;
+	}
+}
+
+@media (max-width: 640px) {
+	.whyAccess {
+		padding: 64px 16px 16px 16px;
+		min-width: auto;
+		gap: 48px;
+	}
+	.whyRecordCardsWrapper {
+		padding: 0px 16px 0px 16px;
+	}
+
+	.whyAccessBefore {
+		font-size: 14px;
+		line-height: 16px; /* 114.286% */
+	}
+
+	.whyRecordTitle,
+	.whyAccessTitle {
+		font-size: 32px;
+		text-align: center;
+	}
+
+	.whyAccessTexts {
+		width: 350px;
+	}
+
+	.whyRecordTitle {
+		width: 350px;
+	}
+
+	.whyAccessCard {
+		height: 100%;
+		gap: 48px;
+	}
+
+	.whyCardTitle {
+		font-size: 16px;
+		line-height: 18px; /* 112.5% */
+	}
+
+	.whyCardSubtitles :nth-child(3) {
+		display: none;
+	}
+
+	.whyCardImage {
+		width: 64.754px;
+		height: 50px;
+	}
+
+	.whyAccessSubtitle {
+		width: 323px;
+	}
+
+	.whyRecordCard {
+		width: 300px;
+	}
+
+	.whyRecordCardsWrapper {
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+		scroll-behavior: smooth;
+	}
+
+	.whyRecordCards {
+		width: max-content;
+	}
+
+	.whyRecordCard {
+		flex: 0 0 auto;
+		scroll-snap-align: center;
+	}
+
+	.whyRecordCard {
+		transition: transform 0.3s ease;
+	}
+
+	.whyIndicators {
+		display: flex;
+		justify-content: center;
+		gap: 2px;
+	}
+
+	.whyIndicator {
+		width: 10px;
+		height: 6px;
+		border-radius: 32px;
+		background: var(--grey, #e0dae6);
+		transition: all 0.3s ease;
+	}
+
+	.whyIndicator.active {
+		width: 32px;
+		border-radius: 32px;
+		background: var(--violet-brand, #2b133d);
+	}
+
+	.why {
+		background-image: none;
+	}
 }

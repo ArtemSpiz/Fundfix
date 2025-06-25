@@ -106,7 +106,18 @@ export default function Tokenomics() {
 
 			<div className='tokenomicsCards'>
 				{tokenomicsCards.map((card, index) => (
-					<div className='tokenomicsCard' key={index}>
+					<div
+						className={`tokenomicsCard ${
+							index === 0
+								? 'paddingFirst'
+								: index === 1
+								? 'paddingSecond'
+								: index === 2
+								? 'paddingThird'
+								: ''
+						}`}
+						key={index}
+					>
 						<div className='tokenomicsCardTop'>
 							<card.icon className='tokenomicsCardIcon' />
 
@@ -132,42 +143,51 @@ export default function Tokenomics() {
 						key={index}
 						ref={el => (linesRef.current[index] = el)}
 					>
-						<div className='tokenomicsLineLeft'>
-							<line.icon
-								className={`tokenomicsLineIcon ${
-									index === 0 ? 'firstTokenomicsLineIcon' : ''
-								}`}
-							/>
-							<div
-								className={`tokenomicsLineTitle ${
-									index === 0 ? 'firstTokenomicsLineTitle' : ''
-								}`}
-							>
-								{line.title}
-							</div>
-						</div>
-
-						<div className='tokenomicsLineRight'>
-							<div className='tokenomicsLineTexts'>
+						<div className='tokenomicsLineTopMob'>
+							<div className='tokenomicsLineLeft'>
+								<line.icon
+									className={`tokenomicsLineIcon ${
+										index === 0 ? 'firstTokenomicsLineIcon' : ''
+									}`}
+								/>
 								<div
-									className={`tokenomicsLineText ${
-										index === 0 ? 'firstTokenomicsLineText' : ''
+									className={`tokenomicsLineTitle ${
+										index === 0 ? 'firstTokenomicsLineTitle' : ''
 									}`}
 								>
-									{line.text}
+									{line.title}
 								</div>
-
-								{line.subtitle && (
-									<div className='tokenomicsLineSubtitle'>{line.subtitle}</div>
-								)}
 							</div>
 
-							<div
-								className={`lineTokenomics ${
-									index === 0 ? 'firstLineTokenomics' : ''
-								}`}
-							/>
+							<div className='tokenomicsLineRight'>
+								<div className='tokenomicsLineTexts'>
+									<div
+										className={`tokenomicsLineText ${
+											index === 0 ? 'firstTokenomicsLineText' : ''
+										}`}
+									>
+										{line.text}
+									</div>
+
+									{line.subtitle && (
+										<div className='tokenomicsLineSubtitle'>
+											{line.subtitle}
+										</div>
+									)}
+								</div>
+
+								<div
+									className={`lineTokenomics ${
+										index === 0 ? 'firstLineTokenomics' : ''
+									}`}
+								/>
+							</div>
 						</div>
+						{line.subtitle && (
+							<div className='tokenomicsLineSubtitle tokenomicsLineMobil'>
+								{line.subtitle}
+							</div>
+						)}
 					</div>
 				))}
 			</div>

@@ -73,6 +73,7 @@
 	justify-content: center;
 	align-items: center;
 	gap: 8px;
+	width: 100%;
 }
 
 .faqCard {
@@ -83,7 +84,8 @@
 	flex-direction: column;
 	gap: 24px;
 	height: 88px;
-	width: 800px;
+	max-width: 800px;
+	width: 80%;
 
 	border-radius: 12px;
 	background: rgba(255, 255, 255, 0.05);
@@ -161,4 +163,68 @@
 	font-style: normal;
 	font-weight: 600;
 	line-height: 22px; /* 137.5% */
+}
+
+@media (max-width: 1280px) {
+	.faq {
+		padding: 32px;
+		gap: 48px;
+	}
+	.faqTitle {
+		font-size: 45px;
+	}
+
+	.faqCard {
+		padding: 22px 24px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.faq {
+		padding: 32px 25px;
+		background-image: url('../../assets/img/MobilBg.png');
+		border: none;
+	}
+	.faqTitle {
+		font-size: 40px;
+	}
+
+	.faqCardOpen {
+		height: 170px;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 768px) {
+	.faq {
+		padding: 32px 20px;
+	}
+	.faqTitle {
+		font-size: 35px;
+	}
+
+	.faqCard {
+		width: 100%;
+	}
+}
+
+@media (max-width: 640px) {
+	.faq {
+		padding: 32px 16px;
+	}
+	.faqTitle {
+		font-size: 32px;
+	}
+
+	.faqCardOpen {
+		height: 204px;
+	}
+
+	.faqTexts {
+		gap: 14px;
+	}
+
+	.faqSubtitle {
+		font-size: 14px;
+	}
 }

@@ -27,7 +27,7 @@ const data = [
 		label: 'Stage',
 		value: <div className='dealCardBefore'>Series A</div>,
 	},
-	{ label: 'Minimum Investment', value: '$25.000' },
+	{ label: 'Min. Investment:', value: '$25.000' },
 ]
 
 export default function Deal() {

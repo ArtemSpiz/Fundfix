@@ -33,6 +33,7 @@ export default function HowItWorks() {
 	const canvasRef = useRef(null)
 	const containerRef = useRef(null)
 	const [hoverIndex, setHoverIndex] = useState(null)
+	const [lineOpacities, setLineOpacities] = useState(howCards.map(() => 0.05))
 
 	const drawLines = (hoverIdx = null) => {
 		const canvas = canvasRef.current
@@ -94,6 +95,7 @@ export default function HowItWorks() {
 			<div className='howItWorkBottom' ref={containerRef}>
 				<div className='howCardsTitle'>Fundfix</div>
 				<canvas ref={canvasRef} className='howCardsCanvas' />
+				<div className='howCardsLine' />
 				<div className='howCards'>
 					{howCards.map((card, index) => (
 						<div

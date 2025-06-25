@@ -212,7 +212,7 @@
 	letter-spacing: -1.68px;
 }
 
-.presaleCards {
+.presaleCardsPurple {
 	display: flex;
 	gap: 9px;
 	align-items: stretch;
@@ -381,4 +381,146 @@
 	font-style: normal;
 	font-weight: 500;
 	line-height: 18px; /* 128.571% */
+}
+
+@media (max-width: 1420px) {
+	.presaleCards {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.presaleTable {
+		height: 100%;
+		width: 100%;
+	}
+
+	.presale {
+		gap: 80px;
+	}
+}
+
+@media (max-width: 1280px) {
+	.presale {
+		padding: 64px 32px 48px 32px;
+		gap: 60px;
+	}
+	.presaleTitle {
+		font-size: 45px;
+	}
+	.presaleTexts {
+		gap: 24px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.presale {
+		padding: 64px 25px 48px 25px;
+		gap: 40px;
+	}
+	.presaleTitle {
+		font-size: 40px;
+		line-height: 106.25%; /* 106.25% */
+	}
+
+	.presaleCard {
+		height: 100%;
+		justify-content: center;
+		gap: 56px;
+	}
+
+	.thirdPresaleCard {
+		justify-content: space-between;
+		height: 299px;
+		position: relative;
+		left: 50%;
+	}
+
+	.thirdPresaleCard .presaleCardCenter {
+		top: -15px;
+	}
+
+	.presaleCardsPurple {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.presale {
+		padding: 64px 20px 48px 20px;
+		gap: 32px;
+		background-image: none;
+	}
+	.presaleTitle {
+		font-size: 35px;
+	}
+}
+
+@media (max-width: 640px) {
+	.presale {
+		padding: 64px 16px 48px 16px;
+	}
+	.presaleTitle {
+		font-size: 32px;
+	}
+
+	.presaleTextsTop {
+		gap: 14px;
+	}
+
+	.presaleBefore {
+		font-size: 14px;
+	}
+
+	.presaleCardText {
+		font-size: 56px;
+	}
+
+	.presaleCardsPurple {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.thirdPresaleCard {
+		position: static;
+	}
+
+	.presaleCard {
+		width: 100%;
+	}
+
+	.presaleTableTop {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.presaleTableTop {
+		padding: 32px 32px 8px 32px;
+	}
+
+	.presaleTableLogoTitle {
+		align-items: center;
+	}
+
+	.presaleTableText {
+		font-size: 24px;
+	}
+
+	.presaleTableTitle {
+		font-size: 14px;
+	}
+
+	.presaleTableLeft {
+		gap: 8px;
+	}
+
+	.presaleTableLogo {
+		width: 130px;
+		height: 32px;
+	}
+
+	.presaleSubtitle {
+		width: 100%;
+		max-width: 450px;
+	}
 }

@@ -4,6 +4,8 @@ import Bag from '../../assets/svg/whiteBag.svg'
 import Rocket from '../../assets/svg/whiteRocket.svg'
 import World from '../../assets/svg/whiteWorld.svg'
 import Puzzle from '../../assets/svg/whitePuzzle.svg'
+import pointImgMob from '../../assets/img/whoMobil.png'
+import Image from 'next/image'
 
 const pointSubtitles = [
 	{
@@ -44,11 +46,20 @@ export default function Point() {
 
 			<div className='pointSubtitles'>
 				{pointSubtitles.map((point, index) => (
-					<div className='pointSubtitle' key={index}>
+					<div
+						key={index}
+						className={`pointSubtitle ${
+							index === 0 ? 'firstPointSubtitle' : ''
+						}`}
+					>
 						<point.icon className='pointSubtitleIcon' />
 						{point.subtitle}
 					</div>
 				))}
+			</div>
+
+			<div className='pointImgMob'>
+				<Image src={pointImgMob} alt='cube' />
 			</div>
 		</div>
 	)

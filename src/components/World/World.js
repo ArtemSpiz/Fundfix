@@ -5,6 +5,7 @@ import imgTitleWorld1 from '../../assets/img/imgCardAccess1.png'
 import imgTitleWorld2 from '../../assets/img/imgCardAccess2.png'
 import imgTitleWorld3 from '../../assets/img/imgCardAccess3.png'
 import Image from 'next/image'
+import CubeWorld from '../../assets/img/beforeMobil.png'
 
 export default function World() {
 	return (
@@ -53,6 +54,10 @@ export default function World() {
 			</div>
 
 			<ButtonPink text='Join FundFix Now' extraClass='worldBtn' />
+
+			<div className='cubeMobilWorld'>
+				<Image src={CubeWorld} alt='cube' />
+			</div>
 		</div>
 	)
 }
