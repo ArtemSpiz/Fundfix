@@ -20,24 +20,18 @@
 	border-radius: 32px;
 	background: var(--violet-brand, #2b133d);
 
-	box-shadow: 0 0 24px rgba(203, 108, 255, 0.8),
-		0 0 48px rgba(203, 108, 255, 0.5), 0 0 96px rgba(203, 108, 255, 0.3);
-
-	animation: pulseShadow 2s infinite alternate ease-in-out;
+	animation: pulseShadowDeal 2s ease-in-out infinite;
 }
 
-@keyframes pulseShadow {
-	0% {
-		box-shadow: 0 0 24px rgba(203, 108, 255, 0.7),
-			0 0 48px rgba(203, 108, 255, 0.4), 0 0 96px rgba(203, 108, 255, 0.2);
+@keyframes pulseShadowDeal {
+	0%,
+	100% {
+		box-shadow: 0 0 32px rgba(203, 108, 255, 0.85),
+			0 0 32px rgba(203, 108, 255, 0.45), 0 0 112px rgba(203, 108, 255, 0.35);
 	}
 	50% {
-		box-shadow: 0 0 32px rgba(203, 108, 255, 0.85),
-			0 0 56px rgba(203, 108, 255, 0.55), 0 0 112px rgba(203, 108, 255, 0.35);
-	}
-	100% {
-		box-shadow: 0 0 24px rgba(203, 108, 255, 0.7),
-			0 0 48px rgba(203, 108, 255, 0.4), 0 0 96px rgba(203, 108, 255, 0.2);
+		box-shadow: 0 0 48px rgba(203, 108, 255, 1),
+			0 0 40px rgba(203, 108, 255, 0.65), 0 0 144px rgba(203, 108, 255, 0.5);
 	}
 }
 

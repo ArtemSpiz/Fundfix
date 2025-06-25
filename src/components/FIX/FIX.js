@@ -1,6 +1,8 @@
 import './FIX.css'
 import Image from 'next/image'
 
+import glassCircle from '../../assets/img/GlassCircle.png'
+
 import Lock from '../../assets/svg/whiteLock.svg'
 import Star from '../../assets/svg/whiteStar.svg'
 import Puzzle from '../../assets/svg/whitePuzzle.svg'
@@ -61,6 +63,30 @@ const fixCards = [
 export default function FIX() {
 	return (
 		<div className='fix'>
+			<div className='fixSquares'>
+				<div className='cubeLeft'>
+					<div className='fixCircelLeft'>
+						<Image src={glassCircle} alt='glassCircle' />
+					</div>
+
+					<div className='columnFix'>
+						{Array.from({ length: 3 }).map((_, i) => (
+							<div className='bgSquareFix' key={`col1-${i}`} />
+						))}
+					</div>
+				</div>
+
+				<div className='cubeRight'>
+					<div className='fixCircelRight'>
+						<Image src={glassCircle} alt='glassCircle' />
+					</div>
+					<div className='columnSecFix'>
+						{Array.from({ length: 6 }).map((_, i) => (
+							<div className='bgSquareFix аааа' key={`step-${i}`} />
+						))}
+					</div>
+				</div>
+			</div>
 			<div className='fixTexts'>
 				<div className='fixTextsTop'>
 					<div className='fixTitles'>

@@ -434,7 +434,7 @@
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: 80px; /* Ширина лівої і правої сітки */
+	width: 80px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(12, 1fr);

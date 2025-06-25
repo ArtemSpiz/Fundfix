@@ -29,11 +29,45 @@
 	pointer-events: none;
 }
 
+@keyframes floatLeft {
+	0%,
+	100% {
+		transform: translate(0px, 0px);
+	}
+	25% {
+		transform: translate(-30px, 80px);
+	}
+	50% {
+		transform: translate(20px, -30px);
+	}
+	75% {
+		transform: translate(-20px, 60px);
+	}
+}
+
+@keyframes floatRight {
+	0%,
+	100% {
+		transform: translate(0px, 0px);
+	}
+	25% {
+		transform: translate(20px, -80px);
+	}
+	50% {
+		transform: translate(-20px, 30px);
+	}
+	75% {
+		transform: translate(10px, -60px);
+	}
+}
+
 .glassCircelLeft {
 	position: absolute;
 	z-index: -1;
 	left: -40px;
 	top: 10px;
+	animation: floatLeft 6s ease-in-out infinite;
+	will-change: transform;
 }
 
 .glassCircelRight {
@@ -41,6 +75,8 @@
 	z-index: -1;
 	right: -40px;
 	bottom: 100px;
+	animation: floatRight 6s ease-in-out infinite;
+	will-change: transform;
 }
 
 .columnSec {

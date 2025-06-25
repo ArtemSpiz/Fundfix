@@ -318,8 +318,19 @@
 	font-weight: 800;
 	line-height: 50px; /* 104.167% */
 	letter-spacing: -2.88px;
+	text-shadow: 0 0 10px #eb9aff;
+	animation: neonPulsePresale 2s ease-in-out infinite;
 }
 
+@keyframes neonPulsePresale {
+	0%,
+	100% {
+		text-shadow: 0 0 8px #eb9aff;
+	}
+	50% {
+		text-shadow: 0 0 12px #eb9aff;
+	}
+}
 .presaleCardSubtitle {
 	color: rgba(255, 255, 255, 0.32);
 	text-align: center;
