@@ -35,7 +35,7 @@ export default function HowItWorks() {
 	const [hoverIndex, setHoverIndex] = useState(null)
 	const [lineOpacities, setLineOpacities] = useState(howCards.map(() => 0.05))
 
-	const lineAlphas = useRef(howCards.map(() => 0.05)) // 0.05 початкова непрозорість
+	const lineAlphas = useRef(howCards.map(() => 0.05))
 
 	const animateLineAlpha = (index, toAlpha) => {
 		const fromAlpha = lineAlphas.current[index]
@@ -45,7 +45,7 @@ export default function HowItWorks() {
 		const animate = now => {
 			const elapsed = now - startTime
 			const progress = Math.min(elapsed / duration, 1)
-			const eased = 0.5 - 0.5 * Math.cos(Math.PI * progress) // easeInOut
+			const eased = 0.5 - 0.5 * Math.cos(Math.PI * progress)
 
 			lineAlphas.current[index] = fromAlpha + (toAlpha - fromAlpha) * eased
 			drawLines()
@@ -53,7 +53,7 @@ export default function HowItWorks() {
 			if (progress < 1) {
 				requestAnimationFrame(animate)
 			} else {
-				lineAlphas.current[index] = toAlpha // ensure it ends exactly
+				lineAlphas.current[index] = toAlpha
 				drawLines()
 			}
 		}
