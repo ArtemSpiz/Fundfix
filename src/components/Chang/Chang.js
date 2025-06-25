@@ -1,6 +1,11 @@
+'use client'
+
 import './Chang.css'
 import Folder from '../../assets/svg/whiteFolder.svg'
 import Bag from '../../assets/svg/whiteBag.svg'
+import { useEffect } from 'react'
+import Image from 'next/image'
+import glassCircle from '../../assets/img/GlassCircle.png'
 
 const changCards = [
 	{
@@ -18,8 +23,47 @@ const changCards = [
 ]
 
 export default function Chang() {
+	useEffect(() => {
+		const squares = document.querySelectorAll('.bgSquareChang')
+
+		squares.forEach(square => {
+			square.addEventListener('mousemove', e => {
+				const rect = square.getBoundingClientRect()
+				const x = e.clientX - rect.left
+				const y = e.clientY - rect.top
+				square.style.setProperty('--mouse-x', `${x}px`)
+				square.style.setProperty('--mouse-y', `${y}px`)
+				square.classList.add('hovered')
+			})
+
+			square.addEventListener('mouseleave', () => {
+				square.classList.remove('hovered')
+			})
+		})
+	}, [])
+
 	return (
 		<div className='chang'>
+			<div className='changSquares'>
+				<div className='glassCircelLeft'>
+					<Image src={glassCircle} alt='glassCircle' />
+				</div>
+
+				<div className='glassCircelRight'>
+					<Image src={glassCircle} alt='glassCircle' />
+				</div>
+				<div className='column'>
+					{Array.from({ length: 3 }).map((_, i) => (
+						<div className='bgSquareChang' key={`col1-${i}`} />
+					))}
+				</div>
+				<div className='columnSec column'>
+					{Array.from({ length: 4 }).map((_, i) => (
+						<div className='bgSquareChang' key={`col2-${i}`} />
+					))}
+				</div>
+			</div>
+
 			<div className='changTexts'>
 				<div className='changSubtitles'>
 					<div className='changNum'>II</div>

@@ -124,8 +124,6 @@ export default function WHY() {
 	}, [isMobile])
 
 	useEffect(() => {
-		if (!isMobile) return
-
 		const interval = setInterval(() => {
 			setActiveIndex(prev => (prev + 1) % cardsRecord.length)
 		}, 10000)
@@ -225,7 +223,12 @@ export default function WHY() {
 					<div className='whyRecordCardsWrapper' ref={scrollRef}>
 						<div className='whyRecordCards'>
 							{cardsRecord.map((card, index) => (
-								<div key={index} className='whyRecordCard'>
+								<div
+									key={index}
+									className={`whyRecordCard ${
+										index === activeIndex ? 'activePulse' : ''
+									}`}
+								>
 									<div className='whyRecordCardTop'>
 										<div className='whyRecordCardImg'>
 											<card.image />

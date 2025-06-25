@@ -35,7 +35,33 @@ export default function HowItWorks() {
 	const [hoverIndex, setHoverIndex] = useState(null)
 	const [lineOpacities, setLineOpacities] = useState(howCards.map(() => 0.05))
 
-	const drawLines = (hoverIdx = null) => {
+	const lineAlphas = useRef(howCards.map(() => 0.05)) // 0.05 початкова непрозорість
+
+	const animateLineAlpha = (index, toAlpha) => {
+		const fromAlpha = lineAlphas.current[index]
+		const duration = 300
+		const startTime = performance.now()
+
+		const animate = now => {
+			const elapsed = now - startTime
+			const progress = Math.min(elapsed / duration, 1)
+			const eased = 0.5 - 0.5 * Math.cos(Math.PI * progress) // easeInOut
+
+			lineAlphas.current[index] = fromAlpha + (toAlpha - fromAlpha) * eased
+			drawLines()
+
+			if (progress < 1) {
+				requestAnimationFrame(animate)
+			} else {
+				lineAlphas.current[index] = toAlpha // ensure it ends exactly
+				drawLines()
+			}
+		}
+
+		requestAnimationFrame(animate)
+	}
+
+	const drawLines = () => {
 		const canvas = canvasRef.current
 		const ctx = canvas.getContext('2d')
 		const container = containerRef.current
@@ -64,10 +90,8 @@ export default function HowItWorks() {
 			ctx.beginPath()
 			ctx.moveTo(startX, startY)
 			ctx.lineTo(endX, endY)
-			ctx.strokeStyle =
-				hoverIdx === index ? 'rgba(255,255,255,1)' : 'rgba(255,255,255,0.05)'
+			ctx.strokeStyle = `rgba(255,255,255,${lineAlphas.current[index]})`
 			ctx.lineWidth = 2
-
 			ctx.stroke()
 		})
 	}
@@ -103,11 +127,11 @@ export default function HowItWorks() {
 							key={index}
 							onMouseEnter={() => {
 								setHoverIndex(index)
-								drawLines(index)
+								animateLineAlpha(index, 1)
 							}}
 							onMouseLeave={() => {
 								setHoverIndex(null)
-								drawLines(null)
+								animateLineAlpha(index, 0.05)
 							}}
 						>
 							<div

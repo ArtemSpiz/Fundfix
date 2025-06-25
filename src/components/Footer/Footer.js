@@ -68,7 +68,7 @@ export default function Footer() {
 				</div>
 			</div>
 
-			<div className='footerReserved'>© 2024 FundFix. All Rights Reserved</div>
+			<div className='footerReserved'>© 2025 FundFix. All Rights Reserved</div>
 		</div>
 	)
 }
