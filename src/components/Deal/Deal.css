@@ -19,6 +19,9 @@
 	gap: 32px;
 	border-radius: 32px;
 	background: var(--violet-brand, #2b133d);
+
+	box-shadow: 0 0 24px rgba(203, 108, 255, 0.8),
+		0 0 48px rgba(203, 108, 255, 0.5), 0 0 96px rgba(203, 108, 255, 0.3);
 }
 
 .dealTexts {

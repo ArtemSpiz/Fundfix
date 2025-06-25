@@ -7,6 +7,8 @@
 	justify-content: space-between;
 	align-items: start;
 	padding: 64px 40px;
+	z-index: 4;
+	position: relative;
 }
 
 .aboutLeft {

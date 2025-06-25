@@ -189,6 +189,7 @@
 	font-style: normal;
 	font-weight: 600;
 	line-height: 22px; /* 137.5% */
+	white-space: nowrap;
 }
 
 .tokenomicsLineRight {
@@ -213,6 +214,7 @@
 	font-weight: 700;
 	line-height: 32px; /* 114.286% */
 	letter-spacing: -1.68px;
+	white-space: nowrap;
 }
 
 .tokenomicsLineSubtitle {
@@ -223,6 +225,7 @@
 	font-style: normal;
 	font-weight: 600;
 	line-height: 16px; /* 114.286% */
+	white-space: nowrap;
 }
 
 .lineTokenomics {
