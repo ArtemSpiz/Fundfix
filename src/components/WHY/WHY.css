@@ -215,7 +215,7 @@
 		rgba(243, 236, 248, 0.32) 100%
 	);
 	box-shadow: 0px 4px 12px 0px rgba(255, 255, 255, 0.24) inset;
-	backdrop-filter: blur(64px);
+	backdrop-filter: blur(10px);
 	position: relative;
 	overflow: hidden;
 	pointer-events: auto;
@@ -385,19 +385,7 @@
 	font-weight: 800;
 	line-height: 50px;
 	letter-spacing: -3.36px;
-
-	text-shadow: 0 0 10px #eb9aff;
-	animation: neonPulse 2s ease-in-out infinite;
-}
-
-@keyframes neonPulse {
-	0%,
-	100% {
-		text-shadow: 0 0 8px #eb9aff;
-	}
-	50% {
-		text-shadow: 0 0 12px #eb9aff;
-	}
+	filter: drop-shadow(0 0 5px #eb9aff);
 }
 
 .whyRecordCardText::before {
@@ -405,7 +393,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, 20%);
+	transform: translate(-50%, -40%);
 	z-index: 0;
 	color: rgba(255, 255, 255, 0.4);
 	filter: blur(52.25px);
@@ -457,24 +445,6 @@
 	background-color: #2e2e2e;
 	opacity: 0.2;
 	transition: transform 1s ease, opacity 1s ease;
-}
-
-.whyRecordCard.activePulse {
-	box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7);
-	animation: pulseShadow 1.5s infinite;
-	z-index: 1;
-}
-
-@keyframes pulseShadow {
-	0% {
-		box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7);
-	}
-	70% {
-		box-shadow: 0 0 20px 15px rgba(138, 43, 226, 0);
-	}
-	100% {
-		box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
-	}
 }
 
 @media (max-width: 1350px) {
