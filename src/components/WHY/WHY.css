@@ -388,22 +388,6 @@
 	filter: drop-shadow(0 0 5px #eb9aff);
 }
 
-.whyRecordCardText::before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -40%);
-	z-index: 0;
-	color: rgba(255, 255, 255, 0.4);
-	filter: blur(52.25px);
-	opacity: 0.7;
-	width: 98px;
-	height: 98px;
-	flex-shrink: 0;
-	background: rgba(255, 255, 255, 0.4);
-}
-
 .whyIndicators {
 	display: none;
 }

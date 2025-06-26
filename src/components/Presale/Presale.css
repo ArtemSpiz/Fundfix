@@ -294,22 +294,6 @@
 	position: relative;
 }
 
-.presaleCardCenter::before {
-	content: '';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 0;
-	color: rgba(255, 255, 255, 0.4);
-	filter: blur(52.25px);
-	opacity: 0.7;
-	width: 90px;
-	height: 90px;
-	flex-shrink: 0;
-	background: rgba(255, 255, 255, 0.4);
-}
-
 .presaleCardText {
 	color: #eb9aff;
 	text-align: center;
