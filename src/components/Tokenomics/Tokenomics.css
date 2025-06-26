@@ -288,7 +288,7 @@
 }
 .tokenomicsLine:nth-child(5).tokenomicsLineVisible,
 .tokenomicsLine:nth-child(6).tokenomicsLineVisible {
-	width: 35%;
+	width: 30%;
 }
 .tokenomicsLineMobil,
 .tokenomicsLineTitle,
@@ -338,6 +338,10 @@
 }
 
 @media (max-width: 1280px) {
+	.tokenomicsLine:nth-child(5).tokenomicsLineVisible,
+	.tokenomicsLine:nth-child(6).tokenomicsLineVisible {
+		width: 35%;
+	}
 	.tokenomics {
 		padding: 32px;
 	}
