@@ -4,6 +4,9 @@ import { Manrope, Oswald, Roboto } from 'next/font/google'
 export const metadata = {
 	title: 'FundFix',
 	description: 'FundFix',
+	icons: {
+		icon: '/favicon-fundfix.png',
+	},
 }
 
 const manrope = Manrope({
