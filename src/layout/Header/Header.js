@@ -6,6 +6,7 @@ import Image from 'next/image'
 
 import openMenu from '../../assets/img/openMenu.png'
 import closeMenu from '../../assets/img/closeMenu.png'
+import heroLogo from '../../assets/img/logoHero.png'
 
 const links = [
 	{ title: 'Product' },
@@ -38,7 +39,9 @@ export default function Header() {
 		<div className={`headerWrapper ${menuOpen ? 'openHeaderWrapper' : ''}`}>
 			<div className={`header ${menuOpen ? 'openHeader' : ''}`}>
 				<div className='headerTop'>
-					<div className='headerLogo'>Fundfix</div>
+					<div className='headerLogo'>
+						<Image src={heroLogo} alt='logo' />
+					</div>
 
 					<div className='headerRight'>
 						<div className='headerLinks'>

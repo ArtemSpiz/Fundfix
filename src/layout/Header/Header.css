@@ -22,15 +22,8 @@
 }
 
 .headerLogo {
-	padding-left: 26px;
-	color: #f4ecf9;
-	text-align: center;
-	font-family: Manrope;
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 24px; /* 133.333% */
-	letter-spacing: -0.36px;
+	margin-left: 26px;
+	height: 20px;
 }
 
 .headerRight {
@@ -128,7 +121,7 @@
 	}
 
 	.headerLogo {
-		padding-left: 20px;
+		margin-left: 20px;
 	}
 
 	.headerBtn {

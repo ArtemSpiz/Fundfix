@@ -37,6 +37,8 @@ export default function HowItWorks() {
 
 	const lineAlphas = useRef(howCards.map(() => 0.05))
 
+	const animationFrameRef = useRef(null)
+
 	const animateLineAlpha = (index, toAlpha) => {
 		const fromAlpha = lineAlphas.current[index]
 		const duration = 300
@@ -48,7 +50,14 @@ export default function HowItWorks() {
 			const eased = 0.5 - 0.5 * Math.cos(Math.PI * progress)
 
 			lineAlphas.current[index] = fromAlpha + (toAlpha - fromAlpha) * eased
-			drawLines()
+
+			// Запускаємо один запит, а не декілька
+			if (!animationFrameRef.current) {
+				animationFrameRef.current = requestAnimationFrame(() => {
+					drawLines()
+					animationFrameRef.current = null
+				})
+			}
 
 			if (progress < 1) {
 				requestAnimationFrame(animate)
@@ -63,18 +72,23 @@ export default function HowItWorks() {
 
 	const drawLines = () => {
 		const canvas = canvasRef.current
-		const ctx = canvas.getContext('2d')
+		const ctx = canvas?.getContext('2d')
 		const container = containerRef.current
 
 		if (!canvas || !ctx || !container) return
 
-		canvas.width = container.offsetWidth
-		canvas.height = container.offsetHeight
+		const width = container.offsetWidth
+		const height = container.offsetHeight
+
+		if (canvas.width !== width) canvas.width = width
+		if (canvas.height !== height) canvas.height = height
 
 		const containerRect = container.getBoundingClientRect()
 		const title = container.querySelector('.howCardsTitle')
-		const titleRect = title.getBoundingClientRect()
+		const titleRect = title?.getBoundingClientRect()
 		const cards = container.querySelectorAll('.howCardWrapper')
+
+		if (!titleRect) return
 
 		ctx.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -97,7 +111,9 @@ export default function HowItWorks() {
 	}
 
 	useEffect(() => {
-		drawLines()
+		requestAnimationFrame(() => {
+			drawLines()
+		})
 	}, [])
 
 	return (
