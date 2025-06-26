@@ -1,6 +1,8 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import './HowItWorks.css'
+import Image from 'next/image'
+import logo from '../../assets/img/logoHero.png'
 
 const howCards = [
 	{
@@ -51,7 +53,6 @@ export default function HowItWorks() {
 
 			lineAlphas.current[index] = fromAlpha + (toAlpha - fromAlpha) * eased
 
-			// Запускаємо один запит, а не декілька
 			if (!animationFrameRef.current) {
 				animationFrameRef.current = requestAnimationFrame(() => {
 					drawLines()
@@ -133,7 +134,9 @@ export default function HowItWorks() {
 			</div>
 
 			<div className='howItWorkBottom' ref={containerRef}>
-				<div className='howCardsTitle'>Fundfix</div>
+				<div className='howCardsTitle'>
+					<Image src={logo} alt='logo' />
+				</div>
 				<canvas ref={canvasRef} className='howCardsCanvas' />
 				<div className='howCardsLine' />
 				<div className='howCards'>

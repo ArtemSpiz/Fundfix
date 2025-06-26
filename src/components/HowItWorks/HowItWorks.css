@@ -92,14 +92,8 @@
 }
 
 .howCardsTitle {
-	color: #eb9aff;
-	text-align: center;
-	font-family: Manrope;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 24px; /* 100% */
-	letter-spacing: -0.48px;
+	height: 28.35px;
+	width: 125.24px;
 }
 
 .howCardsCanvas {
@@ -251,7 +245,7 @@
 	}
 
 	.howCardsTitle {
-		padding-bottom: 10px;
+		margin-bottom: 10px;
 	}
 
 	.howCardsLine {
