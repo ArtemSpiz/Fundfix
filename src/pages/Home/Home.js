@@ -21,9 +21,9 @@ export default function Home() {
 			<Hero />
 			<About />
 			<Chang />
-			<WHY />
-			{/* <HowItWorks /> */}
-			<Deal />
+			{/* <WHY />
+			<HowItWorks />
+			<Deal /> */}
 			<Elite />
 			<FIX />
 			<Presale />
