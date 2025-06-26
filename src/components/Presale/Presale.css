@@ -293,18 +293,19 @@
 	gap: 7px;
 	position: relative;
 }
+
 .presaleCardCenter::before {
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 50%;
-	transform: translate(50%, -50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 0;
 	color: rgba(255, 255, 255, 0.4);
-	filter: blur(10px);
+	filter: blur(52.25px);
 	opacity: 0.7;
-	width: 98px;
-	height: 98px;
+	width: 90px;
+	height: 90px;
 	flex-shrink: 0;
 	background: rgba(255, 255, 255, 0.4);
 }
@@ -318,19 +319,9 @@
 	font-weight: 800;
 	line-height: 50px; /* 104.167% */
 	letter-spacing: -2.88px;
-	text-shadow: 0 0 10px #eb9aff;
-	animation: neonPulsePresale 2s ease-in-out infinite;
+	filter: drop-shadow(0 0 5px #eb9aff);
 }
 
-@keyframes neonPulsePresale {
-	0%,
-	100% {
-		text-shadow: 0 0 8px #eb9aff;
-	}
-	50% {
-		text-shadow: 0 0 12px #eb9aff;
-	}
-}
 .presaleCardSubtitle {
 	color: rgba(255, 255, 255, 0.32);
 	text-align: center;

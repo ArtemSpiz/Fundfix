@@ -5,7 +5,20 @@ export const metadata = {
 	title: 'FundFix',
 	description: 'FundFix',
 	icons: {
-		icon: '/favicon-fundfix.png',
+		icon: [
+			{ url: '/favicon-fundfix.png' },
+			{ url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+			{
+				url: '/apple-touch-icon.png',
+				sizes: '180x180',
+				rel: 'apple-touch-icon',
+			},
+			{ url: '/favicon.ico', rel: 'shortcut icon' },
+		],
+	},
+	manifest: '/site.webmanifest',
+	appleWebApp: {
+		title: 'FundFix',
 	},
 }
 
