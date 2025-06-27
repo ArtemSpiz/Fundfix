@@ -1,14 +1,22 @@
+.fixWrapper {
+	background-image: url('../../assets/img/MobilBg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-color: #2b133d;
+}
+
 .fix {
 	display: flex;
 	align-items: start;
 	justify-content: space-between;
 	padding: 64px 40px;
-	background-image: url('../../assets/img/MobilBg.png');
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	background-color: #2b133d;
+
 	position: relative;
 	overflow: hidden;
+
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .fixSquares {

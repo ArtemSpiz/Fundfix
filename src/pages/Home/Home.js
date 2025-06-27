@@ -20,6 +20,7 @@ export default function Home() {
 		<div className='home'>
 			<Hero />
 			<About />
+			<Featured />
 			<Chang />
 			<WHY />
 			<HowItWorks />
@@ -28,7 +29,6 @@ export default function Home() {
 			<FIX />
 			<Presale />
 			<Tokenomics />
-			<Featured />
 			<Point />
 			<FAQ />
 			<World />

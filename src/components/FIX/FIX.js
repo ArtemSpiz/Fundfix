@@ -62,91 +62,95 @@ const fixCards = [
 
 export default function FIX() {
 	return (
-		<div className='fix'>
-			<div className='fixSquares'>
-				<div className='cubeLeft'>
-					<div className='fixCircelLeft'>
-						<Image src={glassCircle} alt='glassCircle' />
-					</div>
-
-					<div className='columnFix'>
-						{Array.from({ length: 3 }).map((_, i) => (
-							<div className='bgSquareFix' key={`col1-${i}`} />
-						))}
-					</div>
-				</div>
-
-				<div className='cubeRight'>
-					<div className='fixCircelRight'>
-						<Image src={glassCircle} alt='glassCircle' />
-					</div>
-					<div className='columnSecFix'>
-						{Array.from({ length: 6 }).map((_, i) => (
-							<div className='bgSquareFix аааа' key={`step-${i}`} />
-						))}
-					</div>
-				</div>
-			</div>
-			<div className='fixTexts'>
-				<div className='fixTextsTop'>
-					<div className='fixTitles'>
-						<div className='fixNum'>VII</div>
-						<div className='fixBefore'>$FIX Token Utility</div>
-					</div>
-					<div className='fixTitle fixTitleComp'>
-						<div className='fixTitleTop'>
-							<span className='fixTitle'>$FIX:</span>
-							<span className='fixTitle2'>More Than a Token.</span>
+		<div className='fixWrapper'>
+			<div className='fix'>
+				<div className='fixSquares'>
+					<div className='cubeLeft'>
+						<div className='fixCircelLeft'>
+							<Image src={glassCircle} alt='glassCircle' />
 						</div>
-						It’s a Pass Into the Future
+
+						<div className='columnFix'>
+							{Array.from({ length: 3 }).map((_, i) => (
+								<div className='bgSquareFix' key={`col1-${i}`} />
+							))}
+						</div>
 					</div>
 
-					<div className='fixTitle fixTitleMobil'>
-						<div className='fixTitleTop'>
-							<span className='fixTitle'>$FIX:</span>
-							<span className='fixTitle2'>More Than a</span>
+					<div className='cubeRight'>
+						<div className='fixCircelRight'>
+							<Image src={glassCircle} alt='glassCircle' />
 						</div>
-						<div className='fixTitleTop'>
-							<span className='fixTitle2'>Token.</span>
-							<span className='fixTitle'>It’s a Pass Into</span>
+						<div className='columnSecFix'>
+							{Array.from({ length: 6 }).map((_, i) => (
+								<div className='bgSquareFix аааа' key={`step-${i}`} />
+							))}
 						</div>
-						the Future
 					</div>
 				</div>
-
-				<div className='fixSubtitles'>
-					{fixSubtitles.map((fix, index) => (
-						<div
-							key={index}
-							className={`fixSubtitle ${index === 2 ? 'thirdFixSubtitle' : ''}`}
-						>
-							<fix.icon className='fixSubtitleIcon' />
-							<div>{fix.title}</div>
+				<div className='fixTexts'>
+					<div className='fixTextsTop'>
+						<div className='fixTitles'>
+							<div className='fixNum'>VII</div>
+							<div className='fixBefore'>$FIX Token Utility</div>
 						</div>
-					))}
-				</div>
-			</div>
-
-			<div className='fixRight'>
-				<div className='fixRightTitle'>
-					<PinkStar />
-					Membership Tiers
-				</div>
-				<div className='line'></div>
-				<div className='fixRightCards'>
-					{fixCards.map((card, index) => (
-						<div className='fixCard' key={index}>
-							<div className='fixCardTop'>
-								<Image src={card.icon} alt='coin' className='fixCardIcon' />
-								<div className='fixCardTexts'>
-									<div className='fixCardTitle'>{card.title}</div>
-									<div className='fixCardSubtitle'>{card.subtitle}</div>
-								</div>
+						<div className='fixTitle fixTitleComp'>
+							<div className='fixTitleTop'>
+								<span className='fixTitle'>$FIX:</span>
+								<span className='fixTitle2'>More Than a Token.</span>
 							</div>
-
-							<Image src={card.image} alt='ff' className='fixCardImg' />
+							It’s a Pass Into the Future
 						</div>
-					))}
+
+						<div className='fixTitle fixTitleMobil'>
+							<div className='fixTitleTop'>
+								<span className='fixTitle'>$FIX:</span>
+								<span className='fixTitle2'>More Than a</span>
+							</div>
+							<div className='fixTitleTop'>
+								<span className='fixTitle2'>Token.</span>
+								<span className='fixTitle'>It’s a Pass Into</span>
+							</div>
+							the Future
+						</div>
+					</div>
+
+					<div className='fixSubtitles'>
+						{fixSubtitles.map((fix, index) => (
+							<div
+								key={index}
+								className={`fixSubtitle ${
+									index === 2 ? 'thirdFixSubtitle' : ''
+								}`}
+							>
+								<fix.icon className='fixSubtitleIcon' />
+								<div>{fix.title}</div>
+							</div>
+						))}
+					</div>
+				</div>
+
+				<div className='fixRight'>
+					<div className='fixRightTitle'>
+						<PinkStar />
+						Membership Tiers
+					</div>
+					<div className='line'></div>
+					<div className='fixRightCards'>
+						{fixCards.map((card, index) => (
+							<div className='fixCard' key={index}>
+								<div className='fixCardTop'>
+									<Image src={card.icon} alt='coin' className='fixCardIcon' />
+									<div className='fixCardTexts'>
+										<div className='fixCardTitle'>{card.title}</div>
+										<div className='fixCardSubtitle'>{card.subtitle}</div>
+									</div>
+								</div>
+
+								<Image src={card.image} alt='ff' className='fixCardImg' />
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		</div>

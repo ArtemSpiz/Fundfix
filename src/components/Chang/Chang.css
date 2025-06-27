@@ -1,9 +1,12 @@
-.chang {
+.changWrapper {
 	background-image: url('../../assets/img/MobilBg.png');
 	background-color: var(--violet-brand, #2b133d);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-position: center;
+}
+
+.chang {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -11,6 +14,9 @@
 	gap: 128px;
 	position: relative;
 	overflow: hidden;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .changSquares {
